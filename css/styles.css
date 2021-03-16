@@ -10,7 +10,7 @@ header {
 }
 
 .container {
-  width: 1230px;
+  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -455,6 +455,7 @@ h3 {
 .footer .container {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .footer-logo {
@@ -579,6 +580,7 @@ h3 {
   width: 358px;
   height: 50px;
   background-color: var(--bg-dark-gray);
+  color: var(--white-text);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 15px 16px;
@@ -660,6 +662,7 @@ h3 {
 .cards-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .cards-item {
@@ -676,9 +679,9 @@ h3 {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.cards-item:not(:nth-child(3n + 1)) {
-  margin-left: 30px;
-}
+/* .cards-item:not(:nth-child(3n + 1)) {
+  margin-left: 25px;
+} */
 
 .cards-item img {
   display: block;
@@ -861,6 +864,7 @@ h3 {
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
+  letter-spacing: 0.01em;
   color: #757575;
 }
 
@@ -896,7 +900,13 @@ h3 {
   margin-top: 20px;
 }
 
-.policy-label {
+.form__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form__checkbox-label {
   display: inline-block;
 
   font-style: normal;
@@ -904,6 +914,20 @@ h3 {
   font-size: 14px;
   line-height: 24px;
   color: #757575;
+  letter-spacing: 0.03em;
+}
+.checkbox-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+.form__checkbox:checked + .checkbox-icon {
+  border: transparent;
+  background-color: var(--sky-text);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
 }
 
 .policy-link {
